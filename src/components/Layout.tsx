@@ -14,7 +14,10 @@ import {
   BookMarked,
   Settings,
   Menu,
-  X
+  X,
+  FileText,
+  Shield,
+  GitBranch
 } from 'lucide-react'
 import { useAppStore } from '../store/useAppStore'
 import { cn } from '../lib/utils'
@@ -32,6 +35,9 @@ const navigation = [
   { name: 'AI Concept Explorer', href: '/ai-explorer', icon: Brain, indent: true },
   { name: 'Coding Mapper', href: '/coding-mapper', icon: FileCode, indent: true },
   { name: 'Regulatory Lab', href: '/regulatory-lab', icon: Scale, indent: true },
+  { name: 'Case Scenarios', href: '/case-scenarios', icon: FileText, indent: true },
+  { name: 'Data Integrity', href: '/data-integrity', icon: Shield, indent: true },
+  { name: 'Workflow Designer', href: '/workflow-designer', icon: GitBranch, indent: true },
   { name: 'Assessment', href: '/assessment', icon: ClipboardList },
   { name: 'Glossary', href: '/glossary', icon: BookMarked },
   { name: 'Settings', href: '/settings', icon: Settings }
