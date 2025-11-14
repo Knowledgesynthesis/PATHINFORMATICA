@@ -5,6 +5,7 @@ import { db } from './lib/db'
 import { modules } from './data/modules'
 import { glossaryTerms } from './data/glossary'
 import { sampleLOINCCodes, sampleSNOMEDCodes } from './data/codingSystems'
+import { sampleCases } from './data/caseScenarios'
 
 // Components
 import Layout from './components/Layout'
@@ -16,6 +17,9 @@ import WSIWorkflowSimulator from './pages/WSIWorkflowSimulator'
 import AIConceptExplorer from './pages/AIConceptExplorer'
 import CodingMapper from './pages/CodingMapper'
 import RegulatoryLab from './pages/RegulatoryLab'
+import CaseScenarios from './pages/CaseScenarios'
+import DataIntegrityInspector from './pages/DataIntegrityInspector'
+import WorkflowAutomationDesigner from './pages/WorkflowAutomationDesigner'
 import Assessment from './pages/Assessment'
 import Glossary from './pages/Glossary'
 import Settings from './pages/Settings'
@@ -39,6 +43,7 @@ function App() {
         await db.saveGlossaryTerms(glossaryTerms)
         await db.saveLOINCCodes(sampleLOINCCodes)
         await db.saveSNOMEDCodes(sampleSNOMEDCodes)
+        await db.saveCases(sampleCases)
 
         console.log('PathInformatica initialized successfully')
       } catch (error) {
@@ -61,6 +66,9 @@ function App() {
           <Route path="/ai-explorer" element={<AIConceptExplorer />} />
           <Route path="/coding-mapper" element={<CodingMapper />} />
           <Route path="/regulatory-lab" element={<RegulatoryLab />} />
+          <Route path="/case-scenarios" element={<CaseScenarios />} />
+          <Route path="/data-integrity" element={<DataIntegrityInspector />} />
+          <Route path="/workflow-designer" element={<WorkflowAutomationDesigner />} />
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/glossary" element={<Glossary />} />
           <Route path="/settings" element={<Settings />} />
